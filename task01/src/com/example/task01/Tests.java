@@ -6,7 +6,7 @@ import org.junit.Test;
 public class Tests {
 
     @Test
-    public void testСanGetDriverLicense() {
+    public void testCanGetDriverLicense() {
         Assert.assertTrue("В 18 можно получить права", Task01Main.canGetDriverLicense(18));
         Assert.assertTrue("В 19 можно получить права", Task01Main.canGetDriverLicense(19));
         Assert.assertTrue("В 99 можно получить права", Task01Main.canGetDriverLicense(99));
