@@ -1,24 +1,24 @@
 package com.example.task04;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class Tests {
+public class Task04MainTest {
 
     private final ByteArrayOutputStream out = new ByteArrayOutputStream();
     private final PrintStream originalSystemOut = System.out;
 
-    @Before
+    @BeforeEach
     public void setUpSystemOut() {
         System.setOut(new PrintStream(out));
     }
 
-    @After
+    @AfterEach
     public void cleanUpSystemOut() {
         System.setOut(originalSystemOut);
     }
@@ -32,7 +32,7 @@ public class Tests {
             expected.append(i);
             expected.append(System.lineSeparator());
         }
-        Assert.assertEquals(expected.toString(), actual);
+        Assertions.assertEquals(expected.toString(), actual);
     }
 
 }
